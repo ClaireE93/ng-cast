@@ -4,7 +4,7 @@ angular.module('video-player')
 
   bindings: {
     videos: '<',
-    selectVideo: '<',
+    onClick: '<',
   },
 
   templateUrl: 'src/templates/videoList.html',
