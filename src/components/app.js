@@ -4,9 +4,9 @@ app.component('app', {
 
   templateUrl: 'src/templates/app.html',
 
-  binding: {
-    videos: '>',
-  },
+  // bindings: {
+  //   videos: '<',
+  // },
 
   controller: function($scope, $window) {
 
@@ -17,10 +17,7 @@ app.component('app', {
 
     };
     this.videos = $window.exampleVideoData;
+    // console.log('videos are ', this.videos);
     this.currentVideo = this.videos[0];
   },
 });
-
-MainController = () => {
-  this.videos = window.exampleVideoData;
-};
