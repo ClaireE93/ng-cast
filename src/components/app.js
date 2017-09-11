@@ -11,7 +11,7 @@ app.component('app', {
   controller: function($scope, $window) {
 
     this.selectVideo = () => {
-
+      console.log('clicked');
     };
     this.searchResults = () => {
 
