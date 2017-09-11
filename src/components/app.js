@@ -1,14 +1,16 @@
-angular.module('video-player')
+const app = angular.module('video-player');
 
-.component('app', {
+app.component('app', {
+
+  bindings: {
+    videoData: '=',
+  },
 
   templateUrl: 'src/templates/app.html',
 
-  videos: window.exampleVideoData,
 
-  // currentVideo: window.exampleVideoData[0],
-
-  controller: function() {
+  controller: function($scope, $window) {
+    $scope.videoData = $window.exampleVideoData;
     const selectVideo = () => {
 
     };
@@ -17,12 +19,10 @@ angular.module('video-player')
 
     };
 
+    console.log('controller data', $window);
     this.selectVideo = selectVideo;
     this.searchResults = searchResults;
+    this.videos = $scope.videoData;
+    this.currentVideo = this.videos[0];
   }
 });
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   angular.bootstrap(document, ['video-player']);
-// });
