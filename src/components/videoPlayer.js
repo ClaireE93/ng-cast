@@ -5,7 +5,11 @@ angular.module('video-player')
   bindings: {
     video: '<',
   },
-  
+
   templateUrl: 'src/templates/videoPlayer.html',
+
+  // controller: function() {
+  //   if (this.video)
+  // }
 
 });
