@@ -2,27 +2,25 @@ const app = angular.module('video-player');
 
 app.component('app', {
 
-  bindings: {
-    videoData: '=',
-  },
-
   templateUrl: 'src/templates/app.html',
 
+  binding: {
+    videos: '>',
+  },
 
   controller: function($scope, $window) {
-    $scope.videoData = $window.exampleVideoData;
-    const selectVideo = () => {
+
+    this.selectVideo = () => {
 
     };
-
-    const searchResults = () => {
+    this.searchResults = () => {
 
     };
-
-    console.log('controller data', $window);
-    this.selectVideo = selectVideo;
-    this.searchResults = searchResults;
-    this.videos = $scope.videoData;
+    this.videos = $window.exampleVideoData;
     this.currentVideo = this.videos[0];
-  }
+  },
 });
+
+MainController = () => {
+  this.videos = window.exampleVideoData;
+};

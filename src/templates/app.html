@@ -1,15 +1,21 @@
 <div id="app container">
-  <nav class="navbar">
-    <div class="col-md-6 col-md-offset-3">
-      <search><h5><em>search</em> component goes here</h5></search>
-    </div>
-  </nav>
-  <div class="row">
-    <div class="col-md-7">
-      <video-player><h5><em>videoPlayer</em> component goes here</h5></video-player>
-    </div>
-    <div class="col-md-5">
-      <video-list><h5><em>videoList</em> component goes here</h5></video-list>
-    </div>
-  <div>
-</div>
+    <nav class="navbar">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- <div ng-controller="SearchController as search"> -->
+                <search><h5><em>search</em> component goes here</h5></search>
+            <!-- </div> -->
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-md-7">
+            <!-- <div ng-controller="VideoPlayerController as videoPlayer"> -->
+                <video-player><h5><em>videoPlayer</em> component goes here</h5></video-player>
+            <!-- </div> -->
+        </div>
+        <div class="col-md-5">
+            <!-- <div ng-controller="VideoListController as videoList"> -->
+                <video-list data-videos="main.videos" data-on-click="onClick"><h5><em>videoList</em> component goes here</h5></video-list>
+            <!-- </div> -->
+        </div>
+        <div>
+        </div>
