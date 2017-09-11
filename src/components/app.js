@@ -10,14 +10,14 @@ app.component('app', {
 
   controller: function($scope, $window) {
 
-    this.selectVideo = () => {
-      console.log('clicked');
+    this.selectVideo = (video) => {
+      console.log('clicked on', video);
+      this.currentVideo = video;
     };
     this.searchResults = () => {
 
     };
     this.videos = $window.exampleVideoData;
-    // console.log('videos are ', this.videos);
     this.currentVideo = this.videos[0];
   },
 });
