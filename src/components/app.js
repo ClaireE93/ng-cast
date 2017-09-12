@@ -7,15 +7,15 @@ app.component('app', {
   controller: function($window, youTube) {
 
     this.selectVideo = (video) => {
+      console.log('clicked on', video);
       this.currentVideo = video;
     };
     this.searchResults = (data) => {
+      debugger;
       this.videos = data.items;
       this.currentVideo = data.items ? this.videos[0] : {};
     };
 
-    this.videos = [];
-    this.currentVideo = {};
     youTube.search('puppies', this.searchResults);
   },
 });
