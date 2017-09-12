@@ -24,6 +24,8 @@ angular.module('video-player')
 
   };
 
+  // this.debounced = _.debounce(this.search, 500);
+
 
 
 });
