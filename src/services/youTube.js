@@ -17,7 +17,6 @@ angular.module('video-player')
     url = url.slice(0, url.length - 1);
 
     $http.get(url).then((results) => {
-      console.log('Success!', results.data);
       cb(results.data.items);
     }, (results) => {
       console.log('FAILED', results);
