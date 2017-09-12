@@ -17,9 +17,10 @@ app.component('app', {
       this.currentVideo = data ? this.videos[0] : {};
     };
 
-    this.result = (string) => {
-      youTube.search(string, this.searchResults);
-    };
+    // this.result = (string) => {
+    //   console.log('Calling youTube...')
+    //   youTube.search(string, this.searchResults);
+    // };
 
     youTube.search('puppies', this.searchResults);
   },

@@ -4,7 +4,14 @@ angular.module('video-player')
 
   bindings: {
     result: '<',
+    // service: '<'
   },
-  
+
+  controller: function(youTube) {
+    this.searchResults = (text) => {
+      youTube.search(text, this.result);
+    };
+  },
+
   templateUrl: 'src/templates/search.html',
 });

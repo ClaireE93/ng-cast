@@ -1,6 +1,6 @@
 angular.module('video-player')
 .service('youTube', function($http) {
-  this.search = (string = 'puppies', cb = (e) => (e)) => {
+  this.search = (string = '', cb = (e) => (e)) => {
     const obj = {};
     obj.q = string;
     obj.key = window.YOUTUBE_API_KEY;
