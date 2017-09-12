@@ -40,6 +40,7 @@ describe('app', function() {
   });
 
   it('should have a videos property on the scope', function() {
+    // debugger;
     expect(element.isolateScope().$ctrl.videos).to.exist;
     expect(element.isolateScope().$ctrl.videos).to.be.a('array');
   });

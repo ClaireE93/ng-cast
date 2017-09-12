@@ -4,16 +4,21 @@ app.component('app', {
 
   templateUrl: 'src/templates/app.html',
 
-  controller: function($window, youTube) {
+  controller: function(youTube) {
+    this.videos = [];
+    this.currentVideo = {};
 
     this.selectVideo = (video) => {
-      console.log('clicked on', video);
       this.currentVideo = video;
     };
+
     this.searchResults = (data) => {
-      debugger;
-      this.videos = data.items;
-      this.currentVideo = data.items ? this.videos[0] : {};
+      this.videos = data;
+      this.currentVideo = data ? this.videos[0] : {};
+    };
+
+    this.result = (string) => {
+      youTube.search(string, this.searchResults);
     };
 
     youTube.search('puppies', this.searchResults);
